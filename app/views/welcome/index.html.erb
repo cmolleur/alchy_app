@@ -1,0 +1,49 @@
+<div class="main" ng-controller="DrinksController">
+
+  <div class="creationStation">
+    <div class="container">
+      <form class="drink-form">
+        <div class="row">
+            <div class="input-field col s6">
+              <input name="drink" type="text"  ng-model="drink.name">
+              <label for="drink">Name of Drink</label>
+            </div>
+            <div class="input-field col s6">
+              <input name="ingredients" type="text"  ng-model="drink.ingredients">
+              <label for="ingredients">Ingredients</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+                <input name="image" type="text" class="" ng-model="drink.image">
+                <label for="image">Image URL</label>
+              </div>
+              <div class="input-field col s6">
+                <input name="location" type="text" class="" ng-model="drink.location">
+                <label for="location">Location</label>
+              </div>
+          </div>
+          <div class="row">
+            <button type="submit" ng-click="getDrinkData(drink)" class="btn">Submit</a>
+          </div>
+
+      </form>
+      </div>
+  </div>
+
+  <div class="container drink-details" ng-repeat="drink in drinks">
+    <img src="{{drink.image}}" alt="" />
+    <h1>{{drink.name}}</h1>
+    <p>
+      {{drink.ingredients}}
+    </p>
+    <p>
+      {{drink.location}}
+    </p>
+
+
+
+  </div>
+
+
+</div>

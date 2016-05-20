@@ -1,0 +1,71 @@
+body {
+  background-image: url("/assets/cream_pixels.png");
+  height: 100%;
+  background-repeat: repeat;
+}
+nav {
+  /*font-family: 'Pacifico', cursive;*/
+  /*font-family: 'Leckerli One', cursive;*/
+  text-align: center;
+  font-size: 18px;
+  background-color: #26a69a;
+  z-index: 100;
+  height: auto;
+  position: relative;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;*/
+}
+#logo {
+  margin-top: 20px;
+  max-height: 150px;
+  /*padding: 15px;*/
+}
+.creationStation {
+  width: 100%;
+  background-color: #EDEDED;
+  padding: 15px 0px;
+}
+.row {
+  margin-bottom: 0;
+}
+.drink-details {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: white;
+}
+.drink-details img {
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 15px;
+}
+
+.drink-details h3 {
+  margin-top: 0;
+}
+.btn {
+  width: 100%;
+}
+.drink-details:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.X {
+  position:absolute;
+  top:0;
+  right:0;
+  content: "X";
+}
+@media (max-width: 799px) {
+  .drink-details img {
+    width: 100%;
+  }
+  .drink-details h3 {
+    text-align: center;
+  }
+}
