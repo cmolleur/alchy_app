@@ -10,14 +10,14 @@ drinks = Drink.create([
     name:         "Purple Nurple",
     ingredients:  "Grape Soda, Coconut Rum, Grenadine",
     image:        "http://media.namx.org/images/editorial/2010/12/1213/a_jordan_drank/a_jordan_drank_500x279.jpg",
-    location:     "Krusty Krab in LBI"
+    location:     "The Sloppy Tuna, Montauk, NY"
 
 },
 {
-    name:         "Sparkly Diamond",
-    ingredients:  "Champagne, Orange Bitters, strawberry",
-    image:        "http://media.namx.org/images/editorial/2010/12/1213/a_jordan_drank/a_jordan_drank_500x279.jpg",
-    location:     "The Brownstone in Upper East Side"
+    name:         "Dirty Dirty Martini",
+    ingredients:  "Grey Goose, vermouth, blue cheese stuffed olives",
+    image:        "http://www.k983.com/Pics/Leeana/BLUE.jpg",
+    location:     "The Stewed Cow, Hoboken, NJ"
 
 }
 ])
