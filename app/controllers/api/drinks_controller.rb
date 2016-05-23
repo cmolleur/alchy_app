@@ -26,6 +26,7 @@ class Api::DrinksController < ApplicationController
 
   def destroy
     death_row = Drink.find params[:id]
+    death_row.destroy
 
     # if !death_row.nil?
     #   death_row.destroy

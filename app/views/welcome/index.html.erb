@@ -2,7 +2,8 @@
 
   <div class="creationStation">
     <div class="container">
-      <form class="drink-form">
+
+      <form class="drink-form" name="form" ng-submit="getDrinkData()">
         <div class="row">
             <div class="input-field col s6">
               <input name="drink" type="text"  ng-model="drink.name">
@@ -20,28 +21,34 @@
               </div>
               <div class="input-field col s6">
                 <input name="location" type="text" class="" ng-model="drink.location">
-                <label for="location">Location</label>
+                <label for="location">Bar Name, City, State</label>
               </div>
           </div>
           <div class="row">
-            <button type="submit" ng-click="getDrinkData(drink)" class="btn">Submit</a>
+            <div class="col s12">
+            <button type="submit" class="waves-effect waves-light btn" onclick="submitForm()">Submit</a>
+            </div>
           </div>
-
       </form>
+
       </div>
   </div>
 
-  <div class="container drink-details" ng-repeat="drink in drinks">
-    <img src="{{drink.image}}" alt="" />
-    <h1>{{drink.name}}</h1>
+  <div class="container drink-details" ng-repeat="drink in drinks | orderBy: 'created_at':true">
+    <a href="#" class="close-thick" ng-click="removeDrink(drink)"></a>
+
+    <div ng-style="{'background-image':'url({{drink.image}})'}" class="drink-image">
+
+    </div>
+    <h3>{{drink.name}}</h3>
+    <hr>
     <p>
-      {{drink.ingredients}}
+      <font class="bold">Ingredients: </font>{{drink.ingredients}}
     </p>
     <p>
-      {{drink.location}}
+      <font class="bold">Drank At: </font><a target="_blank" href="http://maps.google.com/?q={{drink.location}}">{{drink.location}}</a>
     </p>
-
-
+    <a class="btn" id="delete-btn" ng-click="removeDrink(drink)">Delete</a>
 
   </div>
 
