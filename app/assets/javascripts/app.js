@@ -11,8 +11,9 @@ AlchyApp.controller("DrinksController", ["$scope", "$http", function( $scope, $h
   }
   $scope.getAllDrinks();
 
-  $scope.getDrinkData = function(){
 
+
+  $scope.getDrinkData = function(){
     var newDrink = {
       drink: {
         name: $scope.drink.name,
@@ -21,7 +22,6 @@ AlchyApp.controller("DrinksController", ["$scope", "$http", function( $scope, $h
         location: $scope.drink.location
       }
     }
-
     $http.post('/api/drinks', newDrink).then(function(response){
       $scope.drinks.push(response.data.drink);
     });
