@@ -68,7 +68,7 @@ function submitForm() {
    return false; // Prevent page refresh
 }
 $(document).ready(function(){
-  submitForm();
+  // submitForm();
 
 //   $(".delete-btn").mousedown(function(){
 //     $(this).css("background-color", "white");
