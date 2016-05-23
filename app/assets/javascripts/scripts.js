@@ -4,7 +4,7 @@ function submitForm() {
    var frm = document.getElementsByName('form')[0];
    frm.submit(); // Submit
    frm.reset();  // Reset
-   return false; // Prevent page refresh
+   console.log(frm);
 }
 $(document).ready(function(){
   submitForm();
