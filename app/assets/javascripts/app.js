@@ -24,7 +24,6 @@ AlchyApp.controller("DrinksController", ["$scope", "$http", function( $scope, $h
 
     $http.post('/api/drinks', newDrink).then(function(response){
       $scope.drinks.push(response.data.drink);
-      $(".drink-details").fadeIn();
     });
 
   }
